@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["konbu.komuro@gmail.com"]
 
   spec.summary       = %q{aozora bunko}
-  spec.homepage      = "https://github.com/hogelog/ncode-syosetu"
+  spec.homepage      = "https://github.com/hogelog/aozora-ssml"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
