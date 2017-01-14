@@ -1,4 +1,7 @@
 # AozoraSsml
+[![Build Status](https://travis-ci.org/hogelog/aozora-ssml.svg?branch=master)](https://travis-ci.org/hogelog/aozora-ssml)
+[![Gem Version](https://badge.fury.io/rb/aozora-ssml.svg)](http://badge.fury.io/rb/aozora-ssml)
+
 
 Aozora Bunko XHTML to SSML converter.
 
