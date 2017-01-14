@@ -1,5 +1,4 @@
 require "nokogiri"
-require "htmlentities"
 
 module AozoraSsml
   class Document
