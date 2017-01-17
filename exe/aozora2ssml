@@ -6,7 +6,7 @@ require 'open-uri'
 require 'pry'
 
 if ARGV.size == 0
-  puts "#$0 url mp3"
+  puts "#$0 url ssml"
   exit
 end
 
