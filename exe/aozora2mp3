@@ -3,7 +3,6 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'aozora-polly'
 require 'open-uri'
-require 'pry'
 
 if ARGV.size == 0
   puts "#$0 url mp3"
