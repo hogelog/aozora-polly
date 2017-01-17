@@ -1,6 +1,6 @@
 require "nokogiri"
 
-module AozoraSsml
+module AozoraPolly
   class Document
     attr_reader :title, :author, :main_text
 

@@ -1,9 +1,9 @@
 require "sanitize"
 
-module AozoraSsml
+module AozoraPolly
   class Builder
     def html2ssml(html)
-      doc = ::AozoraSsml::Document.parse(html.encode("utf-8"))
+      doc = ::AozoraPolly::Document.parse(html.encode("utf-8"))
       ssml_body = create_body_ssml(doc)
       create_ssml(doc, ssml_body)
     end

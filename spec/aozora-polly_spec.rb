@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe AozoraSsml do
+describe AozoraPolly do
   describe ".html2ssml" do
     let(:html) { File.read(fixture_path("hashire_merosu.html"), encoding: "cp932") }
-    subject { AozoraSsml.html2ssml(html) }
+    subject { AozoraPolly.html2ssml(html) }
 
     it do
       is_expected.to include('<p>走れメロス</p>')
