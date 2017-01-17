@@ -1,7 +1,14 @@
 require "sanitize"
+require "net/http"
 
 module AozoraPolly
   class Builder
+    def url2ssml(aozora_url)
+      uri = URI.parse(aozora_url)
+      html = Net::HTTP.get(uri).force_encoding("cp932")
+      html2ssml(html)
+    end
+
     def html2ssml(html)
       doc = ::AozoraPolly::Document.parse(html.encode("utf-8"))
       ssml_body = create_body_ssml(doc)
