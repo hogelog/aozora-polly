@@ -3,14 +3,14 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'aozora-polly'
 require 'open-uri'
+require 'pry'
 
 if ARGV.size == 0
-  puts "#$0 url ssml"
+  puts "#$0 url mp3"
   exit
 end
 
-aozora_url, ssml_path = ARGV
+aozora_url, mp3_path = ARGV
 
-ssml = AozoraPolly.url2ssml(aozora_url)
-File.write(ssml_path, ssml)
-puts "Generated: #{ssml_path}"
+AozoraPolly.url2mp3(aozora_url, mp3_path)
+puts "Generated: #{mp3_path}"

@@ -7,6 +7,10 @@ module AozoraPolly
     @builder ||= ::AozoraPolly::Builder.new
   end
 
+  def self.url2mp3(*args)
+    builder.url2mp3(*args)
+  end
+
   def self.url2ssml(*args)
     builder.url2ssml(*args)
   end

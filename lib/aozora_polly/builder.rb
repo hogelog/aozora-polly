@@ -1,8 +1,24 @@
+require "ssml2mp3"
 require "sanitize"
 require "net/http"
 
 module AozoraPolly
   class Builder
+    attr_reader :mp3_builder
+
+    def initialize
+      @mp3_builder = Ssml2mp3::Builder.new
+    end
+
+    def url2mp3(aozora_url, mp3_path)
+      ssml = url2ssml(aozora_url)
+
+      basename = File.basename(mp3_path, ".mp3")
+      File.open(mp3_path, "wb") do |output|
+        mp3_builder.synthesize(ssml, basename, output)
+      end
+    end
+
     def url2ssml(aozora_url)
       uri = URI.parse(aozora_url)
       html = Net::HTTP.get(uri).force_encoding("cp932")
