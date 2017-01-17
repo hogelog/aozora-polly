@@ -23,7 +23,14 @@ Or install it yourself as:
     
 ## Usage
 
+```bash
+$ aozora2ssml http://www.aozora.gr.jp/cards/000035/files/1567_14913.html merosu.ssml
+$ aozora2mp3 http://www.aozora.gr.jp/cards/000035/files/1567_14913.html merosu.mp3
+```
+
 ```ruby
+AozoraPolly.url2mp3("http://www.aozora.gr.jp/cards/000035/files/1567_14913.html", "merosu.mp3")
+AozoraPolly.url2ssml("http://www.aozora.gr.jp/cards/000035/files/1567_14913.html") # => ssml string
 AozoraPolly.html2ssml(html) # => ssml string
 ```
 
