@@ -10,7 +10,7 @@ describe AozoraSsml do
       is_expected.to include('<p>太宰治</p>')
       is_expected.to include('わずか答えた。<break />')
       is_expected.to include('<p>（古伝説と、シルレルの詩から。）</p>')
-      is_expected.to include('<ruby><rb>邪智暴虐</rb><rt>じゃちぼうぎゃく</rt></ruby>')
+      is_expected.to include('じゃちぼうぎゃく')
     end
   end
 end

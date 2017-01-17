@@ -14,7 +14,10 @@ module AozoraSsml
         gsub(%r(<br\s*/?>), '<break />').
         gsub(%r(<(?:h\d|div)[^>]*>), '<p>').
         gsub(%r(</(?:h\d|div)>), '</p>').
-        gsub(%r(<rp>[^<]+</rp>), '')
+        gsub(%r(</?ruby>), '').
+        gsub(%r(<rb>[^<]+</rb>), '').
+        gsub(%r(<rp>[^<]+</rp>), '').
+        gsub(%r(</?rt>), '')
     end
 
     def create_ssml(doc, ssml_body)
