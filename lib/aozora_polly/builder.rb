@@ -40,8 +40,8 @@ module AozoraPolly
         gsub(%r(<(?:h\d|div)[^>]*>), '<p>').
         gsub(%r(</(?:h\d|div)>), '</p>').
         gsub(%r(</?ruby>), '').
-        gsub(%r(<rb>[^<]+</rb>), '').
-        gsub(%r(<rp>[^<]+</rp>), '').
+        gsub(%r(<rb>[^<]*</rb>), '').
+        gsub(%r(<rp>[^<]*</rp>), '').
         gsub(%r(</?rt>), '')
     end
 
